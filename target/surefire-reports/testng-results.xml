@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="2" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-29T15:57:34 IST" name="Suite" finished-at="2025-12-29T15:59:06 IST" duration-ms="91488">
+    <groups>
+    </groups>
+    <test started-at="2025-12-29T15:57:34 IST" name="Test" finished-at="2025-12-29T15:59:06 IST" duration-ms="91488">
+      <class name="package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials">
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:13 IST" name="launch" finished-at="2025-12-29T15:58:15 IST" duration-ms="2352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="invalidLogin(java.lang.String,java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:15 IST" name="invalidLogin" data-provider="LoginData" finished-at="2025-12-29T15:58:26 IST" duration-ms="10291" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at package1.Project1.HomePage.hoverOveronAccountList(HomePage.java:33)
+at package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials.invalidLogin(TestCase6_LogintoamazonwithInvalidcredentials.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-accountList"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70e40c4fe83986808b944d4a845e1fff, findElement {value=nav-link-accountList, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62109}, goog:processID: 15168, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62109/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 70e40c4fe83986808b944d4a845e1fff
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:26 IST" name="quit" finished-at="2025-12-29T15:58:28 IST" duration-ms="2258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:28 IST" name="launch" finished-at="2025-12-29T15:58:30 IST" duration-ms="1814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="invalidLogin(java.lang.String,java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:30 IST" name="invalidLogin" data-provider="LoginData" finished-at="2025-12-29T15:58:49 IST" duration-ms="18696" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test2@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong321]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: auth-error-message-box (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49736}, goog:processID: 23944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49736/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 839d6b511f8a2247eff2a7f9f2165521]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: auth-error-message-box (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49736}, goog:processID: 23944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49736/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 839d6b511f8a2247eff2a7f9f2165521
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials.invalidLogin(TestCase6_LogintoamazonwithInvalidcredentials.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:49 IST" name="quit" finished-at="2025-12-29T15:58:51 IST" duration-ms="2347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:51 IST" name="launch" finished-at="2025-12-29T15:58:53 IST" duration-ms="2410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="invalidLogin(java.lang.String,java.lang.String)[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:58:53 IST" name="invalidLogin" data-provider="LoginData" finished-at="2025-12-29T15:59:04 IST" duration-ms="10307" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test3@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong432]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: nav-link-accountList' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at package1.Project1.HomePage.hoverOveronAccountList(HomePage.java:33)
+at package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials.invalidLogin(TestCase6_LogintoamazonwithInvalidcredentials.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav\-link\-accountList"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [27f470bdd549904d4afc643c4dda72a9, findElement {value=nav-link-accountList, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53050}, goog:processID: 22728, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53050/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27f470bdd549904d4afc643c4dda72a9
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials@79e2c065]" started-at="2025-12-29T15:59:04 IST" name="quit" finished-at="2025-12-29T15:59:06 IST" duration-ms="2274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- package1.Project1.TestCase6_LogintoamazonwithInvalidcredentials -->
+      <class name="package1.Project1.TestCase4_NewUserRegistration">
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase4_NewUserRegistration@478190fc]" started-at="2025-12-29T15:57:59 IST" name="launch" finished-at="2025-12-29T15:58:00 IST" duration-ms="1767" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="withValidCredentials()[pri:0, instance:package1.Project1.TestCase4_NewUserRegistration@478190fc]" started-at="2025-12-29T15:58:00 IST" name="withValidCredentials" finished-at="2025-12-29T15:58:11 IST" duration-ms="10411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withValidCredentials -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase4_NewUserRegistration@478190fc]" started-at="2025-12-29T15:58:11 IST" name="quit" finished-at="2025-12-29T15:58:13 IST" duration-ms="2377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- package1.Project1.TestCase4_NewUserRegistration -->
+      <class name="package1.Project1.TestCase2_LoginToAmazonSearch">
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase2_LoginToAmazonSearch@38c6f217]" started-at="2025-12-29T15:57:49 IST" name="launch" finished-at="2025-12-29T15:57:51 IST" duration-ms="2069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="loginandsearching(java.lang.String,java.lang.String)[pri:0, instance:package1.Project1.TestCase2_LoginToAmazonSearch@38c6f217]" started-at="2025-12-29T15:57:51 IST" name="loginandsearching" data-provider="LoginData" finished-at="2025-12-29T15:57:56 IST" duration-ms="4546" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunanda.ivatury@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Srinidhi*28]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='password']"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [265cb92964f85f91ab8d78a2e5a19d1f, findElement {value=password, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59342}, goog:processID: 25208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59342/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 265cb92964f85f91ab8d78a2e5a19d1f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='password']"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [265cb92964f85f91ab8d78a2e5a19d1f, findElement {value=password, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59342}, goog:processID: 25208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59342/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 265cb92964f85f91ab8d78a2e5a19d1f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at package1.Project1.LoginPage.enterPassword(LoginPage.java:36)
+at package1.Project1.TestCase2_LoginToAmazonSearch.loginandsearching(TestCase2_LoginToAmazonSearch.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginandsearching -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase2_LoginToAmazonSearch@38c6f217]" started-at="2025-12-29T15:57:56 IST" name="quit" finished-at="2025-12-29T15:57:59 IST" duration-ms="2510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- package1.Project1.TestCase2_LoginToAmazonSearch -->
+      <class name="package1.Project1.TestCase1_LoginToAmazon">
+        <test-method is-config="true" signature="launch(java.lang.String)[pri:0, instance:package1.Project1.TestCase1_LoginToAmazon@4d9e68d0]" started-at="2025-12-29T15:57:35 IST" name="launch" finished-at="2025-12-29T15:57:37 IST" duration-ms="2352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="withValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:package1.Project1.TestCase1_LoginToAmazon@4d9e68d0]" started-at="2025-12-29T15:57:37 IST" name="withValidCredentials" data-provider="LoginData" finished-at="2025-12-29T15:57:47 IST" duration-ms="9650" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunanda.ivatury@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Srinidhi*28]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withValidCredentials -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:package1.Project1.TestCase1_LoginToAmazon@4d9e68d0]" started-at="2025-12-29T15:57:47 IST" name="quit" finished-at="2025-12-29T15:57:49 IST" duration-ms="2340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- package1.Project1.TestCase1_LoginToAmazon -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
